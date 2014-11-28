@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clay-model clay-version="2.0.1">
+<database-model author="" begin-script="" end-script="" id="f243d5c:1499f498545:-8000" name="ISW_DB" sql-dialect-id="jp.azzurri.clay.dialect.HSQLDB_1_7_0_Dialect" version="1.0">
+<schema-list>
+<schema id="f243d5c:1499f498545:-7ffd" name="DEFAULT_SCHEMA">
+<table-list>
+<table id="f243d5c:1499f498545:-7fef" name="AMBULANCE">
+<column-list>
+<column auto-increment="false" column-size="9" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fe9" mandatory="true" name="REGISTRATION_NUMBER">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fe8" mandatory="true" name="EQUIPMENT_TYPE">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fe5" mandatory="true" name="LATITUDE">
+<data-type name="DOUBLE" selected-variant-pattern="DOUBLE"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fe4" mandatory="true" name="LONGITUDE">
+<data-type name="DOUBLE" selected-variant-pattern="DOUBLE"/>
+</column>
+</column-list>
+<primary-key id="f243d5c:1499f498545:-7fee" name="PK_AMBULANCE">
+<primary-key-column name="REGISTRATION_NUMBER"/>
+</primary-key>
+</table>
+<table id="f243d5c:1499f498545:-7fe3" name="HOSPITAL">
+<column-list>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fdf" mandatory="true" name="NAME">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="1000" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fdc" mandatory="true" name="ADDRESS">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fdb" mandatory="true" name="LATITUDE">
+<data-type name="DOUBLE" selected-variant-pattern="DOUBLE"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fda" mandatory="true" name="LONGITUDE">
+<data-type name="DOUBLE" selected-variant-pattern="DOUBLE"/>
+</column>
+</column-list>
+<primary-key id="f243d5c:1499f498545:-7fe2" name="PK_HOSPITAL">
+<primary-key-column name="NAME"/>
+</primary-key>
+</table>
+<table id="f243d5c:1499f498545:-7fd9" name="SPECIALITY">
+<column-list>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fcf" mandatory="true" name="NAME">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="f243d5c:1499f498545:-7fd8" name="PK_SPECIALITY">
+<primary-key-column name="NAME"/>
+</primary-key>
+</table>
+<table id="f243d5c:1499f498545:-7fcd" name="PATIENT">
+<column-list>
+<column auto-increment="false" column-size="9" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fc9" mandatory="true" name="DNI">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fc8" mandatory="true" name="NAME">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fc7" mandatory="true" name="SURNAME">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="1000" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fc6" mandatory="true" name="ADDRESS">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fc5" mandatory="true" name="PHONE_NUMBER">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fc0" mandatory="true" name="AGE">
+<data-type name="INT" selected-variant-pattern="INT"/>
+</column>
+<column auto-increment="false" column-size="1" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fbf" mandatory="true" name="GENDER">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="f243d5c:1499f498545:-7fcc" name="PK_PATIENT">
+<primary-key-column name="DNI"/>
+</primary-key>
+</table>
+<table id="f243d5c:1499f498545:-7fbe" name="EMERGENCY_CALL">
+<column-list>
+<column auto-increment="false" column-size="9" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fb8" mandatory="true" name="ID">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fb7" mandatory="true" name="LATITUDE">
+<data-type name="DOUBLE" selected-variant-pattern="DOUBLE"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fb6" mandatory="true" name="LONGITUDE">
+<data-type name="DOUBLE" selected-variant-pattern="DOUBLE"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fb5" mandatory="false" name="DATE">
+<data-type name="DATE" selected-variant-pattern="DATE"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fb4" mandatory="false" name="TIME">
+<data-type name="TIME" selected-variant-pattern="TIME"/>
+</column>
+<column auto-increment="false" column-size="9" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fb3" mandatory="true" name="DNIPATIENT">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="9" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fb2" mandatory="true" name="IDAMBULANCE">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fa9" mandatory="true" name="IDHOSPITAL">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="f243d5c:1499f498545:-7fbd" name="PK_EMERGENCY_CALL">
+<primary-key-column name="ID"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="f243d5c:1499f498545:-7f5e" name="FK_EMERGENCY_CALL_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_PATIENT" referenced-table="PATIENT" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="DNIPATIENT" referenced-key-column-name="DNI"/>
+</foreign-key>
+<foreign-key id="f243d5c:1499f498545:-7ec4" name="FK_EMERGENCY_CALL_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_AMBULANCE" referenced-table="AMBULANCE" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="IDAMBULANCE" referenced-key-column-name="REGISTRATION_NUMBER"/>
+</foreign-key>
+<foreign-key id="f243d5c:1499f498545:-7d66" name="FK_EMERGENCY_CALL_3" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_HOSPITAL" referenced-table="HOSPITAL" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="IDHOSPITAL" referenced-key-column-name="NAME"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="f243d5c:1499f498545:-7fa4" name="HOSPITAL_BASED">
+<column-list>
+<column auto-increment="false" column-size="9" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7fa0" mandatory="true" name="REGISTRATION_NUMBER">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f9f" mandatory="true" name="IDHOSPITAL">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="f243d5c:1499f498545:-7fa3" name="PK_HOSPITAL_BASED">
+<primary-key-column name="REGISTRATION_NUMBER"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="f243d5c:1499f498545:-7bb4" name="FK_HOSPITAL_BASED_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_AMBULANCE" referenced-table="AMBULANCE" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="REGISTRATION_NUMBER" referenced-key-column-name="REGISTRATION_NUMBER"/>
+</foreign-key>
+<foreign-key id="f243d5c:1499f498545:-7b40" name="FK_HOSPITAL_BASED_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_HOSPITAL" referenced-table="HOSPITAL" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="IDHOSPITAL" referenced-key-column-name="NAME"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="f243d5c:1499f498545:-7f9e" name="SUPPORTS">
+<column-list>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f9a" mandatory="true" name="IDSPECIALITY">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f99" mandatory="true" name="IDHOSPITAL">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="f243d5c:1499f498545:-7f9d" name="PK_SUPPORTS">
+<primary-key-column name="IDSPECIALITY"/>
+<primary-key-column name="IDHOSPITAL"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="f243d5c:1499f498545:-7a09" name="FK_SUPPORTS_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_SPECIALITY" referenced-table="SPECIALITY" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="IDSPECIALITY" referenced-key-column-name="NAME"/>
+</foreign-key>
+<foreign-key id="f243d5c:1499f498545:-79ae" name="FK_SUPPORTS_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_HOSPITAL" referenced-table="HOSPITAL" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="IDHOSPITAL" referenced-key-column-name="NAME"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="f243d5c:1499f498545:-7f98" name="SYMPTOM">
+<column-list>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f94" mandatory="true" name="IDSPECIALITY">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="9" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f93" mandatory="true" name="ID">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f92" mandatory="true" name="STAGE_GRAVITY">
+<data-type name="INT" selected-variant-pattern="INT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f91" mandatory="true" name="DURATION">
+<data-type name="DOUBLE" selected-variant-pattern="DOUBLE"/>
+</column>
+<column auto-increment="false" column-size="1000" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f90" mandatory="true" name="DESCRIPTION">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="f243d5c:1499f498545:-7f97" name="PK_SYMPTOM">
+<primary-key-column name="IDSPECIALITY"/>
+<primary-key-column name="ID"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="f243d5c:1499f498545:-78ff" name="FK_SYMPTOM_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_SPECIALITY" referenced-table="SPECIALITY" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="IDSPECIALITY" referenced-key-column-name="NAME"/>
+</foreign-key>
+<foreign-key id="f243d5c:1499f498545:-7887" name="FK_SYMPTOM_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_EMERGENCY_CALL" referenced-table="EMERGENCY_CALL" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="ID" referenced-key-column-name="ID"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="f243d5c:1499f498545:-7f8f" name="PRIVATE">
+<column-list>
+<column auto-increment="false" column-size="9" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f8b" mandatory="true" name="REGISTRATION_NUMBER">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="f243d5c:1499f498545:-7f8a" mandatory="true" name="COMPANY_NAME">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="f243d5c:1499f498545:-7f8e" name="PK_PRIVATE">
+<primary-key-column name="REGISTRATION_NUMBER"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="f243d5c:1499f498545:-781a" name="FK_PRIVATE_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_AMBULANCE" referenced-table="AMBULANCE" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="REGISTRATION_NUMBER" referenced-key-column-name="REGISTRATION_NUMBER"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+</table-list>
+</schema>
+</schema-list>
+</database-model>
+<diagram>
+<table-figure refid="f243d5c:1499f498545:-7fef" x="391" y="14"/>
+<table-figure refid="f243d5c:1499f498545:-7fe3" x="18" y="175"/>
+<table-figure refid="f243d5c:1499f498545:-7fd9" x="563" y="128"/>
+<table-figure refid="f243d5c:1499f498545:-7fcd" x="248" y="431"/>
+<table-figure refid="f243d5c:1499f498545:-7fbe" x="7" y="314"/>
+<table-figure refid="f243d5c:1499f498545:-7fa4" x="372" y="382"/>
+<table-figure refid="f243d5c:1499f498545:-7f9e" x="219" y="107"/>
+<table-figure refid="f243d5c:1499f498545:-7f98" x="54" y="509"/>
+<table-figure refid="f243d5c:1499f498545:-7f8f" x="409" y="493"/>
+</diagram>
+</clay-model>
