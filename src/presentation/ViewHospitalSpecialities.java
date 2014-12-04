@@ -60,7 +60,7 @@ public class ViewHospitalSpecialities extends JDialog {
 				.getHospitals();
 		comboBox.removeAllItems();
 		for (Hospital h : allHosp) {
-			// System.out.println("sss" + a.getRegistrationNumber());
+
 			comboBox.addItem(h.getName());
 		}
 
@@ -92,7 +92,7 @@ public class ViewHospitalSpecialities extends JDialog {
 					// listOfSpec.setVisible(true);
 					model = new DefaultListModel();
 					for (String s : specList) {
-						System.out.println(s);
+						//System.out.println(s);
 						model.addElement(s);
 					}
 					listOfSpec.setModel(model);

@@ -72,21 +72,15 @@ public class ChangeAmbulanceJDialog extends JDialog {
 	 */
 
 	public void loadAmbus() {
-		// try {
-		// if (allAmbu == null) {
+
 		List<Ambulance> allAmbu = Controller.getSingletonController()
 				.getAmbulances();
 		comboBoxAmbulance.removeAllItems();
 		for (Ambulance a : allAmbu) {
-			// System.out.println("sss" + a.getRegistrationNumber());
+
 			comboBoxAmbulance.addItem(a.getRegistrationNumber());
 		}
-		// System.out.println("xxxx" + allAmbu.size());
-		/*
-		 * } catch (Exception e) { JOptionPane.showMessageDialog(null,
-		 * e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE); }
-		 */
-		// }
+
 	}
 
 	public ChangeAmbulanceJDialog() {
@@ -106,22 +100,22 @@ public class ChangeAmbulanceJDialog extends JDialog {
 			public void itemStateChanged(ItemEvent e) {
 				Ambulance p = Controller.getSingletonController().getAmbulance(
 						comboBoxAmbulance.getSelectedItem().toString());
-				System.out.println("yyyy");
+
 				// Ambulance p=allAmbu.next();
-				System.out.println("zzz");
+
 				{
 					textFieldLongitude.setText(String.valueOf(p.getLongitude()));
 					textFieldLatitude.setText(String.valueOf(p.getLatitude()));
-					System.out.println("aaa");
+
 					if (p.getState() == "free") {
 						rdbtnFree.setSelected(true);
 						rdbtnOccupied.setSelected(false);
-						System.out.println("bbb");
+
 					} else {
 						rdbtnFree.setSelected(false);
 						rdbtnOccupied.setSelected(true);
 					}
-					System.out.println("ccc");
+
 				}
 
 			}
